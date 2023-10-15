@@ -11,21 +11,37 @@ public class Task {
     private String title;
     private String description;
     private TaskStatusEnum status;
-    private OffsetDateTime createdDate;
+    private OffsetDateTime createdAt;
+    private OffsetDateTime updatedAt;
 
     public Task() {
     }
 
     public Task(
-            final UUID id,
             final String title,
             final String description
+    ) {
+        this.id = UUID.randomUUID();
+        this.title = title;
+        this.description = description;
+        this.status = TaskStatusEnum.BACKLOG;
+        this.createdAt = OffsetDateTime.now();
+    }
+
+    public Task(
+            final UUID id,
+            final String title,
+            final String description,
+            final TaskStatusEnum status,
+            final OffsetDateTime createdAt,
+            final OffsetDateTime updatedAt
     ) {
         this.id = id;
         this.title = title;
         this.description = description;
-        this.status = TaskStatusEnum.BACKLOG;
-        this.createdDate = OffsetDateTime.now();
+        this.status = status;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
     }
 
     public UUID getId() {
@@ -44,7 +60,11 @@ public class Task {
         return status;
     }
 
-    public OffsetDateTime getCreatedDate() {
-        return createdDate;
+    public OffsetDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public OffsetDateTime getUpdatedAt() {
+        return updatedAt;
     }
 }

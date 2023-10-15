@@ -7,15 +7,26 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>br.com.paulomuniz.core</groupId>
-    <artifactId>core</artifactId>
+    <groupId>br.com.paulomuniz.infra</groupId>
+    <artifactId>infra</artifactId>
     <packaging>jar</packaging>
 
-    <name>core</name>
+    <name>infra</name>
     <url>http://maven.apache.org</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>br.com.paulomuniz.core</groupId>
+            <artifactId>core</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+    </dependencies>
 </project>
