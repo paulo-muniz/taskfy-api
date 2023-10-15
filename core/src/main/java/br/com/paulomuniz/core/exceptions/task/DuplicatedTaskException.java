@@ -2,7 +2,9 @@ package br.com.paulomuniz.core.exceptions.task;
 
 import java.util.UUID;
 
-public class DuplicatedTaskException extends RuntimeException {
+import br.com.paulomuniz.core.exceptions.DomainDuplicatedException;
+
+public class DuplicatedTaskException extends DomainDuplicatedException {
 
     public DuplicatedTaskException(final String message) {
         super(message);
