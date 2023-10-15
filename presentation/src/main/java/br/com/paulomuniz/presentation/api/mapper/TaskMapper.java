@@ -2,10 +2,13 @@ package br.com.paulomuniz.presentation.api.mapper;
 
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import br.com.paulomuniz.core.domain.Task;
 import br.com.paulomuniz.presentation.api.dto.request.task.CreateTaskRequest;
 import br.com.paulomuniz.presentation.api.dto.response.task.TaskResponse;
 
+@Component
 public class TaskMapper {
 
     private TaskMapper() {

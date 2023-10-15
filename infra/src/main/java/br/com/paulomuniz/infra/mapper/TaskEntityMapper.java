@@ -1,8 +1,11 @@
 package br.com.paulomuniz.infra.mapper;
 
+import org.springframework.stereotype.Component;
+
 import br.com.paulomuniz.core.domain.Task;
 import br.com.paulomuniz.infra.entity.TaskEntity;
 
+@Component
 public class TaskEntityMapper {
 
     private TaskEntityMapper() {
