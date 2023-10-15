@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @Configuration
 @EntityScan(basePackages = "br.com.paulomuniz.infra.entity")
-@ComponentScan(basePackages = {"br.com.paulomuniz.infra.repository", "br.com.paulomuniz.core.usecase"})
+@ComponentScan(basePackages = {"br.com.paulomuniz.infra.repository"})
 @EnableJpaRepositories(basePackages = "br.com.paulomuniz.infra.repository")
 public class AppConfig {
 }
