@@ -1,4 +1,4 @@
-# Projeto Spring Boot com Clean Architecture
+# Projeto de tarefas usando Spring Boot com Clean Architecture
 
 Este é um projeto Spring Boot que segue o padrão de arquitetura limpa (Clean Architecture) para separação de responsabilidades em camadas. O objetivo do projeto foi me auxiliar a identificar e organizar minhas tarefas do dia-a-dia. O projeto é dividido em três principais módulos:
 
@@ -12,7 +12,7 @@ Este é um projeto Spring Boot que segue o padrão de arquitetura limpa (Clean A
 
 Para executar o projeto, você deve seguir as etapas abaixo:
 
-1. Clone o repositório: git clone https://github.com/seuusuario/seuprojeto.git
+1. Clone o repositório: git clone https://github.com/paulo-muniz/taskfy-api.git
  
 2. Navegue para o diretório do projeto: ```cd taskfy-api```
 
