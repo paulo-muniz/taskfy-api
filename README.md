@@ -16,7 +16,6 @@ Para executar o projeto, você deve seguir as etapas abaixo:
  
 2. Navegue para o diretório do projeto: ```cd taskfy-api```
 
-
 3. Compile e execute o aplicativo: 
 ````./mvnw spring-boot:run -Dspring.profiles.active=test````
 

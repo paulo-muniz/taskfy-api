@@ -20,6 +20,7 @@
         <module>core</module>
         <module>infra</module>
         <module>presentation</module>
+        <module>app</module>
     </modules>
 
     <properties>
