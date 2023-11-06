@@ -10,7 +10,9 @@ public record TaskResponse(
         String title,
         String description,
         TaskStatusEnum status,
+        boolean active,
         OffsetDateTime createdAt,
-        OffsetDateTime updatedAt
+        OffsetDateTime updatedAt,
+        OffsetDateTime deletedAt
 ) {
 }

@@ -1,12 +1,12 @@
 package br.com.paulomuniz.app.presentation.api.mapper;
 
-import java.util.List;
-
+import br.com.paulomuniz.app.core.domain.Task;
+import br.com.paulomuniz.app.presentation.api.dto.request.task.CreateTaskRequest;
+import br.com.paulomuniz.app.presentation.api.dto.response.task.TaskResponse;
 import org.springframework.stereotype.Component;
 
-import br.com.paulomuniz.app.presentation.api.dto.request.task.CreateTaskRequest;
-import br.com.paulomuniz.app.core.domain.Task;
-import br.com.paulomuniz.app.presentation.api.dto.response.task.TaskResponse;
+import java.util.List;
+import java.util.UUID;
 
 @Component
 public class TaskMapper {
@@ -15,7 +15,7 @@ public class TaskMapper {
     }
 
     public static Task toDomain(CreateTaskRequest request) {
-        return new Task(request.title(), request.description());
+        return Task.createTask(UUID.randomUUID(), request.title(), request.description());
     }
 
     public static TaskResponse toResponse(Task task) {
@@ -24,8 +24,10 @@ public class TaskMapper {
                 task.getTitle(),
                 task.getDescription(),
                 task.getStatus(),
+                task.isActive(),
                 task.getCreatedAt(),
-                task.getUpdatedAt());
+                task.getUpdatedAt(),
+                task.getDeletedAt());
     }
 
     public static List<TaskResponse> toResponseList(List<Task> tasks) {
@@ -35,8 +37,10 @@ public class TaskMapper {
                         t.getTitle(),
                         t.getDescription(),
                         t.getStatus(),
+                        t.isActive(),
                         t.getCreatedAt(),
-                        t.getUpdatedAt()
+                        t.getUpdatedAt(),
+                        t.getDeletedAt()
                 )).toList();
     }
 }

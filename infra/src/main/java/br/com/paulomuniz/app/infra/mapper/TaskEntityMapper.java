@@ -1,9 +1,8 @@
 package br.com.paulomuniz.app.infra.mapper;
 
-import org.springframework.stereotype.Component;
-
 import br.com.paulomuniz.app.core.domain.Task;
 import br.com.paulomuniz.app.infra.entity.TaskEntity;
+import org.springframework.stereotype.Component;
 
 @Component
 public class TaskEntityMapper {
@@ -12,13 +11,10 @@ public class TaskEntityMapper {
     }
 
     public static Task toDomain(final TaskEntity entity) {
-        return new Task(
+        return Task.createTask(
                 entity.getId(),
                 entity.getTitle(),
-                entity.getDescription(),
-                entity.getStatus(),
-                entity.getCreatedAt(),
-                entity.getUpdatedAt()
+                entity.getDescription()
         );
     }
 
@@ -28,8 +24,10 @@ public class TaskEntityMapper {
                 domain.getTitle(),
                 domain.getDescription(),
                 domain.getStatus(),
+                domain.isActive(),
                 domain.getCreatedAt(),
-                domain.getUpdatedAt()
+                domain.getUpdatedAt(),
+                domain.getDeletedAt()
         );
     }
 }
